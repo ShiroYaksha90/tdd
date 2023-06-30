@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require './solver'
 
 RSpec.describe Solver do
@@ -11,19 +9,19 @@ RSpec.describe Solver do
       expect(fact.factorial(5)).to eql 120
     end
 
-    it "Raises an error if number given is negative" do
-        negative = Solver.new
-        expect{negative.factorial(-3)}.to raise_error(ArgumentError)
+    it 'Raises an error if number given is negative' do
+      negative = Solver.new
+      expect { negative.factorial(-3) }.to raise_error(ArgumentError)
     end
   end
 
-  describe "#reverse" do
-    it "Returns a reversed string" do
+  describe '#reverse' do
+    it 'Returns a reversed string' do
       str = Solver.new
       expect(str.reversed('hello')).to eql 'olleh'
     end
   end
-  describe "#fizzbuzz" do
+  describe '#fizzbuzz' do
     it 'When N is divisible by 3, return "fizz"' do
       num = Solver.new
       expect(num.fizzbuzz(3)).to eql 'fizz'
