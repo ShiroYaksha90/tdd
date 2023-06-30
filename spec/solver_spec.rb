@@ -34,7 +34,7 @@ RSpec.describe Solver do
     end
     it 'When N is divisible by 3 and 5, return "fizzbuzz"' do
       num = Solver.new
-      expect(num.fizzbuzz(15)).to eql 'fizzbuzz'
+      expect(num.fizzbuzz(30)).to eql 'fizzbuzz'
     end
     it ' return N as a string' do
       num = Solver.new
