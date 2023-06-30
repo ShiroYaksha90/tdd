@@ -18,9 +18,27 @@ RSpec.describe Solver do
   end
 
   describe "#reverse" do
-  it "Returns a reversed string" do
-    str = Solver.new
-    expect(str.reversed('hello')).to eql 'olleh'
+    it "Returns a reversed string" do
+      str = Solver.new
+      expect(str.reversed('hello')).to eql 'olleh'
+    end
   end
-end
+  describe "#fizzbuzz" do
+    it 'When N is divisible by 3, return "fizz"' do
+      num = Solver.new
+      expect(num.fizzbuzz(3)).to eql 'fizz'
+    end
+    it 'When N is divisible by 5, return "buzz"' do
+      num = Solver.new
+      expect(num.fizzbuzz(5)).to eql 'buzz'
+    end
+    it 'When N is divisible by 3 and 5, return "fizzbuzz"' do
+      num = Solver.new
+      expect(num.fizzbuzz(15)).to eql 'fizzbuzz'
+    end
+    it ' return N as a string' do
+      num = Solver.new
+      expect(num.fizzbuzz(7)).to eql '7'
+    end
+  end
 end
